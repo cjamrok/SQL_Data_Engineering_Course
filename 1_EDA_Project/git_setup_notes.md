@@ -78,3 +78,10 @@ nothing to commit, working tree clean
 - ![alt text](<../Images/Screenshot 2026-08-16 180242.png>)
 - track your changes (green means new addition, red means deletion of code) by running "git diff" or by double clicking the Changed file in the Source control window.
 
+# Git Push
+- this is where we push local repository changes up to github!
+1. we started by logging into github and creating a new public repository. 
+[github/cjamrok/SQL_Data_Engineering_Course](https://github.com/cjamrok/SQL_Data_Engineering_Course)
+2. We were then presented with this screen and it gives you the gitbash code you need to run for one of 2 circumstances. In this case we chose the highlighted one at the bottom, because we created the local repository first, and the hub repo second. (If it had been the other way around we would have done the 2nd longer string of code to create a new local repository to match up with the hub repo we just set up).
+- ![alt text](<../Images/Git Hub Repo.png>)
+
