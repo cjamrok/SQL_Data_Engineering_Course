@@ -67,3 +67,14 @@ once your terminal is pointed to the correct repository, use "git init" in termi
 ![alt text](<../Images/for some reason relative path copying doesnt work out of the box - need to swap for forward slash.png>)
 - Clean house - clean staging area with everything committed. See top left. Publish Branch button only becomes available once The staging area is empty and everything is committed to be published. Commit first - then publish branch.
 ![alt text](<../Images/Clean house - clean staging area with everything committed.png>)
+```
+$ git status
+On branch main
+nothing to commit, working tree clean
+```
+- this means you're ready to publish your fill branch, nothing in the staging area!
+
+## This is so cool to me
+- ![alt text](<../Images/Screenshot 2026-08-16 180242.png>)
+- track your changes (green means new addition, red means deletion of code) by running "git diff" or by double clicking the Changed file in the Source control window.
+
