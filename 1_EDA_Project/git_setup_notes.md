@@ -94,6 +94,13 @@ nothing to commit, working tree clean
 2. Now we need to pull those changes down with fetch.
 3. go back to the git command screenshot for help! fetch will pull the hub repo changes into your staging area, but NOT your working directory. So until you run git merge, you won't see those changes appear in vs Code/local files.
 4. ![alt text](<../Images/Screenshot 2026-08-16 182514.png>)
-5. 
+5. git push -u origin main
+6. git fetch 
+7. git merge origin/main
+8. git status
+9. origin/main = remote hub repo
+
+## didn't fully understand these:
+- $ git diff Head..origin/main
 
 
