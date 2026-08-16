@@ -7,6 +7,8 @@ Question: What are the most in-demand skills for data engineers?
     providing insights into the most valuable skills for data engineers seeking remote work
 */
 
+-- testing 123 :)
+
 describe job_postings_fact;
 describe skills_dim;
 --job_id will get you the skills associated with each job
