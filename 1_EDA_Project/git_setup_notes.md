@@ -63,4 +63,7 @@ once your terminal is pointed to the correct repository, use "git init" in termi
 - right now only our 1_EDA_Project folder is committed, so we need to get everything else too. Use "git add ." to add everything to the staging area:
 ![alt text](<../Images/Screenshot 2026-08-16 174451.png>)
 
-
+- for some reason relative path copying doesnt work out of the box - need to swap for forward slash if you're trying to snip add/commit one specific file. 
+![alt text](<../Images/for some reason relative path copying doesnt work out of the box - need to swap for forward slash.png>)
+- Clean house - clean staging area with everything committed. See top left. Publish Branch button only becomes available once The staging area is empty and everything is committed to be published. Commit first - then publish branch.
+![alt text](<../Images/Clean house - clean staging area with everything committed.png>)
