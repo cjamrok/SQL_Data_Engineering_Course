@@ -89,6 +89,11 @@ nothing to commit, working tree clean
 4. ![alt text](<../Images/first push to hub.png>)
 5. ![alt text](<../Images/push successful.png>)
 
-
+## Next up is merge and fetch
+1. Luke changed the contents of a sql file on github rather than locally in VS code. 
+2. Now we need to pull those changes down with fetch.
+3. go back to the git command screenshot for help! fetch will pull the hub repo changes into your staging area, but NOT your working directory. So until you run git merge, you won't see those changes appear in vs Code/local files.
+4. ![alt text](<../Images/Screenshot 2026-08-16 182514.png>)
+5. 
 
 
