@@ -1,5 +1,8 @@
 # Data Types
 
+- btw link to Luke's repository for this course:
+[Luke Git Repo](https://github.com/lukebarousse/SQL_Data_Engineering_Course/tree/main/Projects/2_WH_Mart_Build)
+
 ![alt text](<../Images/Data Types_1.png>)
 
 ![alt text](<../Images/Data Types_2.png>)
