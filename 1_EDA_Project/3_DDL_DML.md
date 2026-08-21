@@ -32,7 +32,7 @@ Swapping over to [1.22_DDL_DML_Pt2.sql](../Lessons/1.20/1.22_DDL_DML_Pt2.sql) fo
 
 Summary from Luke:
 1. Latest data for every query = view
-2. Fast views and stable results = CTAs
+2. Fast views and stable results (snapshot) = CTAs
 3. Testing/debugging = Temp Tables
 
 
@@ -44,7 +44,7 @@ Truncate is faster than DELETE FROM Table
 
 ![alt text](../Images/CTEs.png)
 
-Good idea to start with your subqueries and execute them first, then paste them where needed into your main query:
+Good idea to start coding your subqueries and execute them first, then paste them where needed into your main query:
 
 ```
 SELECT job_title_short, median(salary_year_avg) as median_salary,
@@ -55,6 +55,10 @@ GROUP BY job_title_short
 ```
 
 ![alt text](../Images/CTE_2.png)
+
+- Copilot advice on when to use subqueries rather than CTEs:
+![alt text](../Images/subquery_teams.png)
+![alt text](../Images/subquery_teams2.png)
 
 ## Where Exists/Not Exists
 ![alt text](<../Images/Where Exists.png>)
@@ -77,15 +81,4 @@ WHERE NOT EXISTS (
 )
 ```
 
-## Data Pipelines - Serious (I think) Data Engineering Staging/Merge Type Shit:
-
-[Luke_Link](https://youtu.be/ol9_NnC9-cc?si=AuBhxePtwSoOT-Do&t=32010)
-
-Process Luke explained:
-[Priority_Roles.sql](../Lessons/1.24/Priority_Roles.sql)
-1. Initial Load - run only once. Create table for snapshot and load all data into it. 
-2. On a daily basis we go through and perform a "batch load", and this version will use a combo of update, insert and delete statement to maintain snapshot table up to date
-3. Update batch loading into our "V2" that relies just on Merge to combine what we will do in #2, doing exact same thing as #2 - only sexier
-
--Good Merge explanation/diagram:
-![alt text](<../Images/merge explanation.png>)
+Now go here: [4_DataPipelining.md](4_DataPipelining.md)

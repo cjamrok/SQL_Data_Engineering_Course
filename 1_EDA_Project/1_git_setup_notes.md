@@ -99,6 +99,8 @@ nothing to commit, working tree clean
 7. git merge origin/main
 8. git status
 9. origin/main = remote hub repo
+10. Lastly doing a git pull (combines git fetch and git merge into one action)
+- ![git pull](<../Images/git pull.png>)
 
 ## didn't fully understand these:
 - $ git diff Head..origin/main

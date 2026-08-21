@@ -132,8 +132,8 @@ WHERE salary_year_avg is not null;
 -- Scenario 2 – Subquery in FROM
 -- Stage only jobs that are remote before aggregating:
 SELECT job_title_short, median(salary_year_avg) as median_salary,
-(SELECT median(salary_year_avg) FROM job_postings_fact
-WHERE job_work_from_home = TRUE) AS market_remote_median_salary
+    (SELECT median(salary_year_avg) FROM job_postings_fact
+    WHERE job_work_from_home = TRUE) AS market_remote_median_salary
 FROM job_postings_fact
 WHERE job_work_from_home = TRUE and salary_year_avg is not null
 GROUP BY job_title_short
@@ -142,15 +142,15 @@ limit 10;
 -- Scenario 3 – Subquery in `HAVING`
 -- Keep only job titles whose median salary is above the overall median:
 SELECT job_title_short, median(salary_year_avg) as median_salary,
-(SELECT median(salary_year_avg) FROM job_postings_fact
-WHERE job_work_from_home = TRUE) AS market_remote_median_salary
+    (SELECT median(salary_year_avg) FROM job_postings_fact
+    WHERE job_work_from_home = TRUE) AS market_remote_median_salary
 FROM job_postings_fact
 WHERE job_work_from_home = TRUE and salary_year_avg is not null
 GROUP BY job_title_short
 
 HAVING median(salary_year_avg) > 
-(SELECT median(salary_year_avg) FROM job_postings_fact
-WHERE job_work_from_home = TRUE)
+    (SELECT median(salary_year_avg) FROM job_postings_fact
+    WHERE job_work_from_home = TRUE)
 
 limit 10;
 
@@ -158,6 +158,12 @@ limit 10;
 -- Compare how much more (or less) remote roles pay compared to onsite roles for each job title.
 -- Use a CTE to calculate the median salary by title and work arrangement, then compare those medians.
 
+
+--so what's happening here is you select a CTE that shows median salary by job title with duplicates for each job title - one for remove and one for office
+--then you query that CTE and filter to only show the remote jobs
+--THEN you join that query result with the same CTE table once again, this time filtering just for office jobs. The result is below, one median salary column
+--for remote, and another for office. Then you can add the gap row level calc in the main query for a 3rd column as well
+--see "remove" and "office" aliases below in the join for further clarification
 WITH CTE AS (
 SELECT job_title_short, job_work_from_home, CAST(MEDIAN(salary_year_avg) AS Integer) as median_salary
 FROM job_postings_fact
