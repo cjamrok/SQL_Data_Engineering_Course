@@ -60,3 +60,19 @@ If you delete branch in vscode it only deletes the local branch, even if you run
 - Involves github for a real world scenario when you are working on changes that you want to commit on your feature branch for example, but then you see that your teammates have already pushed changes to main brand on remote repo. 
 - Perform "3 way merge" to get commit C from the feature branch and the commit E from the main branch into one final merge, see screenshot below 
 ![alt text](<../Images/Git Branch_3way_1.png>)
+
+- Ran git fetch to pull down changes (simulated by us but in real world example would be from a teammate pushing their own changes) into local repo environment vscode. Teammate changes highlighted in screenshot below, popped up on screen following git fetch. 
+
+![alt text](<../Images/Git Branch_3way_2.png>)
+
+- Now we’re tracking the changes, and we’ll run git pull (remember git merge = fetch + pull in one fell swoop) to pull them down into local repo. This means our main branch is up to date with origin/main, but it has NOT yet been merged with our new feature branch. This is when the 3 way merge comes in, which will merge the branches locally. 
+
+![alt text](<../Images/Git Branch_3way_3.png>)
+
+- Then a git push to remote repo gets us all synced up. From there we can also delete the secondary branch we created for this. 
+
+![alt text](<../Images/Git Branch_3way_4.png>)
+
+- Delete the secondary feature branch:
+
+![alt text](<../Images/Git Branch_3way_5.png>)
