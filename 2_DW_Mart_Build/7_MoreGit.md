@@ -57,4 +57,6 @@ If you delete branch in vscode it only deletes the local branch, even if you run
 
 
  2. Three Way Merge 
-
+- Involves github for a real world scenario when you are working on changes that you want to commit on your feature branch for example, but then you see that your teammates have already pushed changes to main brand on remote repo. 
+- Perform "3 way merge" to get commit C from the feature branch and the commit E from the main branch into one final merge, see screenshot below 
+![alt text](<../Images/Git Branch_3way_1.png>)
