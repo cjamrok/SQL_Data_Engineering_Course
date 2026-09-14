@@ -35,5 +35,26 @@ To push the current branch and set the remote as upstream, use
     - Since main branch has no new commits, you can quickly go ahead and merge any and all commits on your side branch straight to main with no fuss. In other words in the screenshot below, our feature branch is "ahead of" our main branch, and we need to sync them up. 
     ![alt text](<../Images/Git Branch3.png>)
     - To perform merge you have to switch to the branch that is playing catchup, in this case main. 
+
+    ## Lol this got confusing and ran into some issues. 
+    - Obiously git cannot distinguish between changes on non text files if you upload two versions of the same image file for example! 
+    - Here are the notes from what I learned. Combination of following along with Luke and troubleshooting myself before eventually being able to perform the fast forward merge, and then wrapping up with deleting the secondary branch we created. 
+    ### Notes: 
+This means “out of sync with remote repo”, need to perform push
+     ![alt text](<../Images/Git Branch4.png>)
+
+
+Merge performed successfully! At this stage local repo branches are merged and all file contents match, but we haven’t pushed to remote repo so it says “your branch is ahead of origin/main by 6 commits.”
+![alt text](<../Images/Git Branch5.png>)
+
+
+Now git push – everything matches, all branches and both local and remote repos:
+![alt text](<../Images/Git Branch6.png>)
+ 
+
+If you delete branch in vscode it only deletes the local branch, even if you run git push after. You have to run this second delete branch line of code to delete it on local repo as well:
+ ![alt text](<../Images/Git Branch7.png>)
+
+
  2. Three Way Merge 
 
