@@ -65,7 +65,7 @@ If you delete branch in vscode it only deletes the local branch, even if you run
 
 ![alt text](<../Images/Git Branch_3way_2.png>)
 
-- Now we’re tracking the changes, and we’ll run git pull (remember git merge = fetch + pull in one fell swoop) to pull them down into local repo. This means our main branch is up to date with origin/main, but it has NOT yet been merged with our new feature branch. This is when the 3 way merge comes in, which will merge the branches locally. 
+- Now we’re tracking the changes, and we’ll run git pull (remember git pull = fetch + merge in one fell swoop) to pull them down into local repo. This means our main branch is up to date with origin/main, but it has NOT yet been merged with our new feature branch. This is when the 3 way merge comes in, which will merge the branches locally. 
 
 ![alt text](<../Images/Git Branch_3way_3.png>)
 
@@ -76,3 +76,33 @@ If you delete branch in vscode it only deletes the local branch, even if you run
 - Delete the secondary feature branch:
 
 ![alt text](<../Images/Git Branch_3way_5.png>)
+
+# Pull Requests (PR)
+
+- Request to take changes that have been finalized on a branch and merge them to the main branch
+
+![alt text](<../Images/Git Pull_1.png>)
+![alt text](<../Images/Git Pull_2.png>)
+
+- Change No.1 and 2 from the screenshot are the result of discussion and feedback from the stakeholder who is tasked with approving the PR and merging with main branch
+
+- Up above in 3 way merge practice we did a git pull but in two separate steps, git fetch and then git merge
+
+## Git Ignore
+
+- this file tells git which file(s) to ignore, and NOT to bother tracking. 
+
+![alt text](<../Images/git ignore.png>)
+
+- best practice is to create git ignore file set up early on in the project, because any commits that exist before the creation of the .gitignore file will keep right on committing even after the .gitignore file is set up. 
+- there is a workaround "git rm -r" to retroactively remove the files from the tracking, but its kind of a pain. 
+
+- specify files:
+![alt text](<../Images/git ignore_2.png>)
+- wildcards/folders: 
+![alt text](<../Images/git ignore_3.png>)
+
+## what should you add to .gitignore?
+
+- git hub offers a repository of recommended gitignore files for various programming languages. There's not one for sql, but luke hooked us up: 
+- lukeb.co/sql-de-github
