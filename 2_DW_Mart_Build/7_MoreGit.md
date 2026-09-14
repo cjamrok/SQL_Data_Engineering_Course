@@ -26,5 +26,14 @@ To push the current branch and set the remote as upstream, use
 
     git push --set-upstream origin feature/project2-readme
 
-## Making changes on a branch
+## Git Merging
+ 
+ Taking changes finalized on one branch (hotfixes or new features for example) and merging them/transfering them over to another branch, perhaps the main branch.
+
+ 1. Fast Forward Merge
+    - when you have no new commits on the main branch. 
+    - Since main branch has no new commits, you can quickly go ahead and merge any and all commits on your side branch straight to main with no fuss. In other words in the screenshot below, our feature branch is "ahead of" our main branch, and we need to sync them up. 
+    ![alt text](<../Images/Git Branch3.png>)
+    - To perform merge you have to switch to the branch that is playing catchup, in this case main. 
+ 2. Three Way Merge 
 
