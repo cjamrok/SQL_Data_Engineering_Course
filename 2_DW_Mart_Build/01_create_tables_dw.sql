@@ -1,7 +1,7 @@
 --Step 1: DW - Create star schema tables
 
 DROP TABLE IF EXISTS skills_job_dim;
-DROP TABLE IF EXISTS job_posting_fact;
+DROP TABLE IF EXISTS job_postings_fact;
 DROP TABLE IF EXISTS skills_dim;
 DROP TABLE IF EXISTS company_dim;
 --because of data model relationships and primary/foreign keys, the order in which you drop these tables matters! 
@@ -16,11 +16,11 @@ CREATE TABLE company_dim (
 
 CREATE TABLE skills_dim (
     skill_id    INTEGER PRIMARY KEY,
-    skill       VARCHAR,
+    skills       VARCHAR,
     type        VARCHAR
 );
 
-CREATE TABLE job_posting_fact (
+CREATE TABLE job_postings_fact (
     job_id              INTEGER     PRIMARY KEY,
     company_id          INTEGER,
     job_title_short     VARCHAR,
@@ -45,7 +45,7 @@ CREATE TABLE skills_job_dim(
     job_id           INTEGER,
     PRIMARY KEY (skill_id, job_id),
     FOREIGN KEY (skill_id) REFERENCES skills_dim(skill_id),
-    FOREIGN KEY (job_id)   REFERENCES job_posting_fact(job_id)    
+    FOREIGN KEY (job_id)   REFERENCES job_postings_fact(job_id)    
 );
 
 --data validation/make sure tables were created properly at the end here:
