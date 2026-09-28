@@ -15,6 +15,8 @@ https://youtu.be/ol9_NnC9-cc?si=LXLR4p7gEvn9Utv2&t=48631
 
 ![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Screenshot 2026-09-28 090415.png>)
 
+[03_create_flat_mart.sql](03_create_flat_mart.sql)
+
 ![alt text](<../Images/Project 2 - Data Warehouse/Screenshot 2026-09-27 192909.png>)
 
 ![alt text](<../Images/Project 2 - Data Warehouse/Screenshot 2026-09-27 194104.png>)
@@ -42,6 +44,11 @@ Will help us answers questions such as - what is the top/highest demand skill in
 
 ![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Screenshot 2026-09-28 093136.png>)
 
+[04_create_skills_mart.sql](04_create_skills_mart.sql)
+
+## Priority Mart - for batch loading / incremental loading, using merge
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/prio mart.png>)
+--why build this priority mart? 
 
 
 
