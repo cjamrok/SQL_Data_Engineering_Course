@@ -48,8 +48,36 @@ Will help us answers questions such as - what is the top/highest demand skill in
 
 ## Priority Mart - for batch loading / incremental loading, using merge
 ![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/prio mart.png>)
---why build this priority mart? 
 
+--this part went fast because we actually recycled some scripts from lesson 1.24 when we learned about merging/batch loading/incremental. We then "refactored" the queries we copied to make them fit into our new schema, updating references aliases and what not. 
 
+--but hte upshot is this - 05_ script runs and creates the priority_roles table from scratch, updating to reflect latest business input. Then from there a priority_jobs_snapshot table is created, joining fact data and using joins to only include job_title_shorts that exist in the priority roles table. 
+
+[05_create_priority_mart.sql](05_create_priority_mart.sql)
+
+--from there, in script 06_ we hard code some changes/updates to priority_roles table E.G.,
+--create a temporary table - effectively a new priority_jobs_snapshot, but with these
+--latest and greatest priority_roles taken into consideration. This temp table acts as the 
+--source table for the merge, and we target the true (not temporary) priority_jobs_snapshot 
+--table in the priority mart as the target. The MERGE INTO updates all rows with new
+--"Updated_At" or "Priority_Lvl"s, inserts any that may be missing from target table, 
+--and deletes any that exist in target but not the source/temp table. Voila.
+
+[06_incremental_update_prio_mart.sql](06_incremental_update_prio_mart.sql)
+
+The master data script (run one line and everything updates/runs) is updated to include steps 5 and 6. 
+
+Now we must load what we have into motherduck so it can act like a true database! 
+
+--Check which databases already exist in MotherDuck.
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Screenshot 2026-09-28 113529.png>)
+
+--Now we run this command in terminal to run our master data script, but loading to motherduck rather than to the .duckdb file in VsCode:
+
+    duckdb md:dw_marts -c ".read build_dw_marts.sql"
+
+--lol remember I created motherduck account with google not work email
+
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Screenshot 2026-09-28 115028.png>)
 
 
