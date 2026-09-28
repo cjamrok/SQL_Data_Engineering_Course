@@ -4,7 +4,7 @@ An ETL pipeline that transforms flat job posting data (single CSV with embedded 
 
 *Bonus project — not covered in the course video*
 
-![Data Warehouse Schema](../../Resources/images/1_2_Data_Warehouse.png)
+![Images/Project 2 - Data Warehouse/Next Batch/Final Cleanup before pushing proj2 to remote hub/1_2_Data_Warehous.png](<../Images/Project 2 - Data Warehouse/Next Batch/Final Cleanup before pushing proj2 to remote hub/1_2_Data_Warehous.png>)
 
 ---
 
@@ -74,7 +74,7 @@ Job posting data often arrives as a **flat CSV** with skills stored as a Python-
 
 ### Star Schema Output
 
-![Data Warehouse Schema](../../Resources/images/1_2_Data_Warehouse.png)
+![Images/Project 2 - Data Warehouse/Next Batch/Final Cleanup before pushing proj2 to remote hub/1_2_Data_Warehous.png](<../Images/Project 2 - Data Warehouse/Next Batch/Final Cleanup before pushing proj2 to remote hub/1_2_Data_Warehous.png>)
 
 - **Fact Table:** `job_postings_fact` – Central table with job metrics and foreign keys
 - **Dimension Tables:** `company_dim`, `skills_dim` – Lookup tables with surrogate keys
