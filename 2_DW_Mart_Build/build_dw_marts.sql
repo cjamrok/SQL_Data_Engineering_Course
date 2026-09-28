@@ -1,3 +1,5 @@
+--duckdb dw_marts.duckdb -c ".read build_dw_marts.sql"
+
 --this file will run all of the individual sql scripts in sequence, 
 --allowing us to build out the data mart with just one line of code! 
 
