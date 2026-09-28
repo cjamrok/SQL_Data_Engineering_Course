@@ -1,0 +1,3 @@
+stole the folder from luke off of his github remote repository by running:
+
+git clone https://github.com/lukebarousse/SQL_Data_Engineering_Course.git
