@@ -106,3 +106,15 @@ If you delete branch in vscode it only deletes the local branch, even if you run
 
 - git hub offers a repository of recommended gitignore files for various programming languages. There's not one for sql, but luke hooked us up: 
 - lukeb.co/sql-de-github
+
+# PRIME Example of entire git workflow! 
+
+## In this exmaple we have finalized our changes on development branch. We wish to add/commit those changes, then merge them to the main branch, then push them to remote repository on Github. Finally, delete old development branch for housekeeping, leaving only main branch. 
+
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Final Cleanup before pushing proj2 to remote hub/Screenshot 2026-09-28 144202.png>)
+
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Final Cleanup before pushing proj2 to remote hub/Screenshot 2026-09-28 144232.png>)
+
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Final Cleanup before pushing proj2 to remote hub/Screenshot 2026-09-28 144407.png>)
+
+- good idea to run "git pull origin main" before pushing anything, just to make sure local repository is all up to date. You should see "Already up to date."
