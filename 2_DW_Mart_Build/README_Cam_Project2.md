@@ -31,6 +31,17 @@ https://youtu.be/ol9_NnC9-cc?si=LXLR4p7gEvn9Utv2&t=48631
 -- one line of code you can't see above the screenshot (switch to the higher tier branch that you're merging to, switching off of the branch that you're merging from) =  git switch develop/project-2
 ![alt text](<../Images/Project 2 - Data Warehouse/Screenshot 2026-09-27 213630.png>)
 
+# Skills Demand Mart
+--unlike the "denormalized" flat/wide table from 03_create_flat_mart.sql, this is a normalized star schema mart with one fact table and two dim tables
+
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Screenshot 2026-09-28 092850.png>)
+
+Our fact table will be an aggregation of the data warehouse, aggregated monthly by skill/by job_title_short. From there we get counts of job postings and other measures. 
+
+Will help us answers questions such as - what is the top/highest demand skill in the market for each quarter? 
+
+![alt text](<../Images/Project 2 - Data Warehouse/Next Batch/Screenshot 2026-09-28 093136.png>)
+
 
 
 
